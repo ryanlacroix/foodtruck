@@ -1,0 +1,16 @@
+<h1>Login</h1>
+<div>
+  <label>Username:
+    <input [(ngModel)]="username" placeholder="Username"/>
+  </label>
+</div>
+<div>
+  <label>Password:
+    <input [(ngModel)]="password" placeholder="Password"/>
+  </label>
+</div>
+<div>
+  <button (click)="sendCredentials();">Log in</button>
+  <span *ngIf="wrongCredentials">Incorrect username or password</span>
+  <span *ngIf="success">Login successful!</span>
+</div>
